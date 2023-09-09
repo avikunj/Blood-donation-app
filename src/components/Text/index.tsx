@@ -46,6 +46,7 @@ export const AppText = ({
           fontSize: 14,
           color: primary,
           textTransform: 'uppercase',
+          paddingLeft: 10,
         });
         break;
       case 'Link':
