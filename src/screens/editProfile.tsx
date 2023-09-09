@@ -8,6 +8,7 @@ import AppImageLoader from '../components/Image/image';
 import AppRow from '../components/Row';
 import AppIcon from '../components/Icon';
 import {colors} from '../stylesheets/colors';
+import Spacer from '../components/Spacer';
 
 const EdirProfileScreen = ({navigation}: {navigation: any}) => {
   return (
@@ -73,6 +74,7 @@ const EdirProfileScreen = ({navigation}: {navigation: any}) => {
         onChange={() => console.log(1)}
       />
       <AppButton innerText={'Update'} onPress={() => console.log(1)} />
+      <Spacer />
     </AppContainer>
   );
 };

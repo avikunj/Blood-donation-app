@@ -6,12 +6,14 @@ import AppInputField from '../components/Form/inputField';
 import AppButton from '../components/Form/button';
 import AppSwitch from '../components/Form/switch';
 import AppRow from '../components/Row';
+import Spacer from '../components/Spacer';
 
-const AddUpdateRequest = () => {
+const AddUpdateRequest = ({navigation}: {navigation: any}) => {
   return (
     <AppContainer
       pageTitle={'New Request'}
-      pageSubTitle={'Request to donate blood and save life'}>
+      pageSubTitle={'Request to donate blood and save life'}
+      navigation={navigation}>
       <AppInputField
         label={'Patient Name'}
         keyboardType="default"
@@ -63,6 +65,7 @@ const AddUpdateRequest = () => {
         <AppSwitch state={true} handleChange={() => console.log(1)} />
       </AppRow>
       <AppButton innerText={'post request'} onPress={() => console.log(1)} />
+      <Spacer />
     </AppContainer>
   );
 };

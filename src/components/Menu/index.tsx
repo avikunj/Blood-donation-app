@@ -52,6 +52,20 @@ const AppMenu = ({navigation}: {navigation: any}) => {
               }
             />
           </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('AddUpdateRequest')}>
+            <AppIcon
+              icon={'plus'}
+              size={25}
+              color={
+                currentRoute == 'AddUpdateRequest'
+                  ? colors.primary
+                  : colors.white
+              }
+            />
+          </TouchableOpacity>
+
           <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
             <AppIcon
               icon={'gear'}
