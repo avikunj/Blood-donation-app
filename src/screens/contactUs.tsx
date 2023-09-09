@@ -18,7 +18,7 @@ const ContactScreen = ({navigation}: {navigation: any}) => {
         onChange={() => console.log(1)}
       />
       <AppText
-        type="SubHeading"
+        type="Para"
         text={
           'Our team will get back to you within next 12 - 24 hours. Thanks for using our application.'
         }

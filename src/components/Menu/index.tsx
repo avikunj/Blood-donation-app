@@ -32,7 +32,7 @@ const AppMenu = ({navigation}: {navigation: any}) => {
           <TouchableOpacity onPress={() => navigation.navigate('SearchScreen')}>
             <AppIcon
               icon={'search'}
-              size={35}
+              size={25}
               color={
                 currentRoute == 'SearchScreen' ||
                 currentRoute == 'SearchResults'
@@ -44,7 +44,7 @@ const AppMenu = ({navigation}: {navigation: any}) => {
           <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
             <AppIcon
               icon={'user'}
-              size={35}
+              size={25}
               color={
                 currentRoute == 'Profile' || currentRoute == 'EditProfile'
                   ? colors.primary
@@ -55,7 +55,7 @@ const AppMenu = ({navigation}: {navigation: any}) => {
           <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
             <AppIcon
               icon={'gear'}
-              size={35}
+              size={25}
               color={currentRoute == 'Settings' ? colors.primary : colors.white}
             />
           </TouchableOpacity>
@@ -63,7 +63,7 @@ const AppMenu = ({navigation}: {navigation: any}) => {
             onPress={() => navigation.navigate('ContactScreen')}>
             <AppIcon
               icon={'comment'}
-              size={35}
+              size={25}
               color={
                 currentRoute == 'ContactScreen' ? colors.primary : colors.white
               }

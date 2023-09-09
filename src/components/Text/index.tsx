@@ -27,7 +27,7 @@ export const AppText = ({
         setState({
           ...state,
           fontFamily: 'Montserrat-SemiBold',
-          fontSize: 30,
+          fontSize: 24,
           color: white,
         });
         break;

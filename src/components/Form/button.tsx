@@ -14,7 +14,7 @@ const AppButton = ({innerText, onPress}: {innerText: String; onPress: any}) => {
         borderColor: colors.primary,
         borderRadius: 10,
         marginVertical: 20,
-        paddingHorizontal: 12,
+        // paddingHorizontal: 12,
       }}>
       <AppText
         text={innerText}
@@ -22,7 +22,7 @@ const AppButton = ({innerText, onPress}: {innerText: String; onPress: any}) => {
         style={{
           color: colors.primary,
           textAlign: 'center',
-          fontSize: 20,
+          fontSize: 16,
           padding: 15,
           textTransform: 'uppercase',
           fontWeight: '700',
