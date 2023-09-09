@@ -24,7 +24,10 @@ const LoginScreen = ({navigation}: {navigation: any}) => {
   };
 
   return (
-    <AppContainer pageTitle={'Welcome'} pageSubTitle={'Sign in to continue'}>
+    <AppContainer
+      pageTitle={'Welcome'}
+      pageSubTitle={'Sign in to continue'}
+      navigation={navigation}>
       <AppInputField
         label={'Mobile Number'}
         keyboardType={'phone-pad'}
@@ -42,11 +45,11 @@ const LoginScreen = ({navigation}: {navigation: any}) => {
       />
       <AppRow style={{marginVertical: 15}}>
         <AppRow>
-          <AppCheckBox
+          {/* <AppCheckBox
             value={toggleCheckBox}
             onChange={(value: any) => setToggleCheckBox(value)}
-          />
-          <AppText text={'Remember Me'} type="SubHeading" />
+          /> */}
+          {/* <AppText text={'Remember Me'} type="SubHeading" /> */}
         </AppRow>
         <AppLink
           text={'Forget Password?'}
