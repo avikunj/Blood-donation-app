@@ -57,7 +57,7 @@ const AppMenu = ({navigation}: {navigation: any}) => {
             onPress={() => navigation.navigate('AddUpdateRequest')}>
             <AppIcon
               icon={'plus'}
-              size={25}
+              size={30}
               color={
                 currentRoute == 'AddUpdateRequest'
                   ? colors.primary
