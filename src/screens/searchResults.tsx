@@ -124,7 +124,7 @@ const SearchResultScreen = ({navigation}: {navigation: any}) => {
             text={'Mohali, Punjab'}
             style={{marginLeft: 20, marginBottom: 5, color: '#000'}}
           />
-          <AppLink
+          {/* <AppLink
             style={{
               color: 'red',
               fontWeight: '500',
@@ -133,7 +133,7 @@ const SearchResultScreen = ({navigation}: {navigation: any}) => {
             }}
             link={null}
             text={'Request a rider for pick and drop service'}
-          />
+          /> */}
         </AppColumn>
       </AppRow>
     </>
