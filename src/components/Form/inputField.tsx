@@ -36,6 +36,7 @@ const AppInputField = ({
           paddingBottom: 15,
           paddingTop: 10,
           color: white,
+          paddingLeft: 10,
         }}
         placeholderTextColor={lightGrey}
         placeholder={placeholder}
