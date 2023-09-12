@@ -23,11 +23,14 @@ import ContactScreen from './src/screens/contactUs';
 import SplashScreen from './src/screens/splashScreen';
 import AddUpdateRequest from './src/screens/addUpdateRequest';
 import AddUpdateEvent from './src/screens/addUpdateEvent';
+import RequestListScreen from './src/screens/requestList';
+import BloodBanksList from './src/screens/bloodBanksList';
+import AllEvents from './src/screens/eventsList';
 
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashScreen">
+      <Stack.Navigator initialRouteName="Events">
         <Stack.Screen
           name="Login"
           component={LoginScreen}
@@ -90,7 +93,7 @@ function App(): JSX.Element {
         />
         <Stack.Screen
           name="RequestList"
-          component={SplashScreen}
+          component={RequestListScreen}
           options={{headerShown: false, title: ''}}
         />
         <Stack.Screen
@@ -100,7 +103,7 @@ function App(): JSX.Element {
         />
         <Stack.Screen
           name="BloodBanksList"
-          component={SplashScreen}
+          component={BloodBanksList}
           options={{headerShown: false, title: ''}}
         />
         <Stack.Screen
@@ -110,21 +113,11 @@ function App(): JSX.Element {
         />
         <Stack.Screen
           name="Events"
-          component={SplashScreen}
+          component={AllEvents}
           options={{headerShown: false, title: ''}}
         />
         <Stack.Screen
           name="EventDetail"
-          component={SplashScreen}
-          options={{headerShown: false, title: ''}}
-        />
-        <Stack.Screen
-          name="HospitalsList"
-          component={SplashScreen}
-          options={{headerShown: false, title: ''}}
-        />
-        <Stack.Screen
-          name="HospitalDetail"
           component={SplashScreen}
           options={{headerShown: false, title: ''}}
         />

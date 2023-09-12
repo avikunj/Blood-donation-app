@@ -57,7 +57,7 @@ const AppMenu = ({navigation}: {navigation: any}) => {
             onPress={() => navigation.navigate('AddUpdateRequest')}>
             <AppIcon
               icon={'plus'}
-              size={30}
+              size={25}
               color={
                 currentRoute == 'AddUpdateRequest'
                   ? colors.primary
@@ -65,14 +65,16 @@ const AppMenu = ({navigation}: {navigation: any}) => {
               }
             />
           </TouchableOpacity>
-
-          <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+          <TouchableOpacity onPress={() => navigation.navigate('RequestList')}>
             <AppIcon
-              icon={'gear'}
+              icon={'cart-plus'}
               size={25}
-              color={currentRoute == 'Settings' ? colors.primary : colors.white}
+              color={
+                currentRoute == 'RequestList' ? colors.primary : colors.white
+              }
             />
           </TouchableOpacity>
+
           <TouchableOpacity
             onPress={() => navigation.navigate('ContactScreen')}>
             <AppIcon
@@ -81,6 +83,13 @@ const AppMenu = ({navigation}: {navigation: any}) => {
               color={
                 currentRoute == 'ContactScreen' ? colors.primary : colors.white
               }
+            />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+            <AppIcon
+              icon={'gear'}
+              size={25}
+              color={currentRoute == 'Settings' ? colors.primary : colors.white}
             />
           </TouchableOpacity>
         </AppRow>
