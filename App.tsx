@@ -26,6 +26,7 @@ import AddUpdateEvent from './src/screens/addUpdateEvent';
 import RequestListScreen from './src/screens/requestList';
 import BloodBanksList from './src/screens/bloodBanksList';
 import AllEvents from './src/screens/eventsList';
+import Myrequests from './src/screens/myRequests';
 
 function App(): JSX.Element {
   return (
@@ -122,18 +123,8 @@ function App(): JSX.Element {
           options={{headerShown: false, title: ''}}
         />
         <Stack.Screen
-          name="MyDonations"
-          component={SplashScreen}
-          options={{headerShown: false, title: ''}}
-        />
-        <Stack.Screen
           name="MyRequests"
-          component={SplashScreen}
-          options={{headerShown: false, title: ''}}
-        />
-        <Stack.Screen
-          name="MySocialScore"
-          component={SplashScreen}
+          component={Myrequests}
           options={{headerShown: false, title: ''}}
         />
       </Stack.Navigator>
