@@ -6,6 +6,7 @@ import AppImageLoader from '../components/Image/image';
 import AppIcon from '../components/Icon';
 import {colors} from '../stylesheets/colors';
 import {TouchableOpacity} from 'react-native';
+import {routes} from '../utils/enums';
 
 const ProfileScreen = ({navigation}: {navigation: any}) => {
   return (
@@ -42,7 +43,8 @@ const ProfileScreen = ({navigation}: {navigation: any}) => {
           alignItems: 'center',
         }}>
         <AppText text={'Personal Information'} type="Info" />
-        <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(routes.EDIT_PROFILE)}>
           <AppIcon icon={'edit'} size={30} color={colors.primary} />
         </TouchableOpacity>
       </AppRow>

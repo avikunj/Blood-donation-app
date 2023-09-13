@@ -9,11 +9,27 @@ import {
   useNavigationState,
 } from '@react-navigation/native';
 import {TouchableOpacity} from 'react-native';
+import {routesList} from '../../routes';
+import {routes} from '../../utils/enums';
 
 const AppMenu = ({navigation}: {navigation: any}) => {
-  const routes = useNavigationState(state => state.routes);
-  const currentRoute = routes[routes.length - 1].name;
-  const publicRoutes = ['Login', 'SplashScreen', 'Register', 'ResetPassword'];
+  const routeData = useNavigationState(state => state.routes);
+  const currentRoute = routeData[routeData.length - 1].name;
+  const publicRoutes = routesList
+    ?.filter((b: any) => b.isPrivate == false)
+    ?.map((a: any) => a.route);
+
+  const {
+    SEARCH,
+    SEARCH_RESULTS,
+    PROFILE,
+    EDIT_PROFILE,
+    PUT_REQUEST,
+    GET_REQUESTS,
+    CONTACT,
+    SETTINGS,
+  } = routes;
+
   return (
     <>
       {!publicRoutes.includes(currentRoute) ? (
@@ -29,67 +45,60 @@ const AppMenu = ({navigation}: {navigation: any}) => {
             width: '100%',
             justifyContent: 'space-evenly',
           }}>
-          <TouchableOpacity onPress={() => navigation.navigate('SearchScreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SEARCH)}>
             <AppIcon
               icon={'search'}
               size={25}
               color={
-                currentRoute == 'SearchScreen' ||
-                currentRoute == 'SearchResults'
+                currentRoute == SEARCH || currentRoute == SEARCH_RESULTS
                   ? colors.primary
                   : colors.white
               }
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+          <TouchableOpacity onPress={() => navigation.navigate(PROFILE)}>
             <AppIcon
               icon={'user'}
               size={25}
               color={
-                currentRoute == 'Profile' || currentRoute == 'EditProfile'
+                currentRoute == PROFILE || currentRoute == EDIT_PROFILE
                   ? colors.primary
                   : colors.white
               }
             />
           </TouchableOpacity>
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate('AddUpdateRequest')}>
+          <TouchableOpacity onPress={() => navigation.navigate(PUT_REQUEST)}>
             <AppIcon
               icon={'plus'}
               size={25}
               color={
-                currentRoute == 'AddUpdateRequest'
-                  ? colors.primary
-                  : colors.white
+                currentRoute == PUT_REQUEST ? colors.primary : colors.white
               }
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('RequestList')}>
+          <TouchableOpacity onPress={() => navigation.navigate(GET_REQUESTS)}>
             <AppIcon
               icon={'cart-plus'}
               size={25}
               color={
-                currentRoute == 'RequestList' ? colors.primary : colors.white
+                currentRoute == GET_REQUESTS ? colors.primary : colors.white
               }
             />
           </TouchableOpacity>
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate('ContactScreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate(CONTACT)}>
             <AppIcon
               icon={'comment'}
               size={25}
-              color={
-                currentRoute == 'ContactScreen' ? colors.primary : colors.white
-              }
+              color={currentRoute == CONTACT ? colors.primary : colors.white}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SETTINGS)}>
             <AppIcon
               icon={'gear'}
               size={25}
-              color={currentRoute == 'Settings' ? colors.primary : colors.white}
+              color={currentRoute == SETTINGS ? colors.primary : colors.white}
             />
           </TouchableOpacity>
         </AppRow>

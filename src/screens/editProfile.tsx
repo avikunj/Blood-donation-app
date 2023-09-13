@@ -10,7 +10,7 @@ import AppIcon from '../components/Icon';
 import {colors} from '../stylesheets/colors';
 import Spacer from '../components/Spacer';
 
-const EdirProfileScreen = ({navigation}: {navigation: any}) => {
+const EditProfileScreen = ({navigation}: {navigation: any}) => {
   return (
     <AppContainer
       pageTitle={'Edit Profile'}
@@ -79,4 +79,4 @@ const EdirProfileScreen = ({navigation}: {navigation: any}) => {
   );
 };
 
-export default EdirProfileScreen;
+export default EditProfileScreen;

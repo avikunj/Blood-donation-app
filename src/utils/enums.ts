@@ -1,0 +1,22 @@
+export const routes = {
+        LOGIN:'LoginScreen',
+        REGISTER:'RegisterScreen',
+        RESET_PWD:'ResetPasswordScreen',
+        SEARCH:'SearchScreen',
+        SEARCH_RESULTS:'SearchResultScreen',
+        SETTINGS:'SettingScreen',
+        PROFILE:'ProfileScreen',
+        EDIT_PROFILE:'EditProfileScreen',
+        CONTACT:'ContactScreen',
+        SPLASH:'SplashScreen',
+        PUT_REQUEST:'AddUpdateRequest',
+        GET_REQUESTS:'RequestListScreen',
+        MY_REQUESTS:'Myrequests',
+        REQUEST_DETAIL:'RequestDetail',
+        BLOOD_BANKS:'BloodBanksList',
+        BLOOD_BANK_DETAIL:'BloodBankDetail',
+        PUT_EVENT:'AddUpdateEvent',
+        GET_EVENTS:'AllEvents',
+        MY_EVENTS:'MyEvents',
+        EVENT_DETAILS:'EventDetail'
+    }

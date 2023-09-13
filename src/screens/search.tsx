@@ -13,6 +13,7 @@ import AppContainer from '../components/Container';
 import {AppText} from '../components/Text';
 import AppSelectBox from '../components/Form/selectField';
 import AppButton from '../components/Form/button';
+import {routes} from '../utils/enums';
 
 const SearchScreen = ({navigation}: {navigation: any}) => {
   const bloodGroups = ['A+', 'A-', 'O+', 'O-', 'AB+', 'AB-', 'B+', 'B-'];
@@ -68,7 +69,7 @@ const SearchScreen = ({navigation}: {navigation: any}) => {
       /> */}
       <AppButton
         innerText={'Search'}
-        onPress={() => navigation.navigate('SearchResults')}
+        onPress={() => navigation.navigate(routes.SEARCH_RESULTS)}
       />
       <View>
         {/* <View style={{backgroundColor: '#ddd'}}>
